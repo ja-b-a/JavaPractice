@@ -1,5 +1,23 @@
 package org.exercises.oop.itogproject.ru.store.online.model.enumeration;
 
 public enum Country {
-    CHINA, INDIA, JAPAN, KENYA, BRAZIL, VIETNAM, ETHIOPIA, PERU, MEXICO
+  CHINA("Китай"),
+  INDIA("Индия"),
+  JAPAN("Япония"),
+  KENYA("Кения"),
+  BRAZIL("Бразилия"),
+  VIETNAM("Вьетнам"),
+  ETHIOPIA("Эфиопия"),
+  PERU("Перу"),
+  MEXICO("Мексика");
+
+  private final String text;
+
+  Country(String text) {
+    this.text = text;
+  }
+
+  public String getText() {
+    return this.text;
+  }
 }

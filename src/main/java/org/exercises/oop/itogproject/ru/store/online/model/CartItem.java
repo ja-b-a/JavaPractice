@@ -1,27 +1,39 @@
 package org.exercises.oop.itogproject.ru.store.online.model;
 
-public class CartItem {
-    private Drink drink;
-    private Short count;
+import java.math.BigDecimal;
 
-    public CartItem(Drink drink, Short count) {
-        this.drink = drink;
-        this.count = count;
-    }
+public final class CartItem {
 
-    public Drink getDrink() {
-        return drink;
-    }
+  private final Drink drink;
+  private Short count;
 
-    public void setDrink(Drink drink) {
-        this.drink = drink;
-    }
+  public CartItem(Drink drink, Short count) {
+    this.drink = drink;
+    setCount(count);
+  }
 
-    public Short getCount() {
-        return count;
-    }
+  public Drink getDrink() {
+    return drink;
+  }
 
-    public void setCount(Short count) {
-        this.count = count;
+  public Short getCount() {
+    return count;
+  }
+
+  public void setCount(Short count) {
+    if (count == null || count <= 0) {
+      throw new IllegalArgumentException("Количество должно быть больше 0");
     }
+    this.count = count;
+  }
+
+  public BigDecimal getTotal() {
+    return drink.getPrice().multiply(BigDecimal.valueOf(count));
+  }
+
+  @Override
+  public String toString() {
+    return "CartItem{name: %s, count: %s, total: %s}"
+        .formatted(drink.getName(), count, getTotal());
+  }
 }

@@ -1,33 +1,36 @@
 package org.exercises.oop.itogproject.ru.store.online.model;
 
-import org.exercises.oop.itogproject.ru.store.online.model.enumeration.*;
-
 import java.math.BigDecimal;
+import org.exercises.oop.itogproject.ru.store.online.model.enumeration.CoffeeType;
+import org.exercises.oop.itogproject.ru.store.online.model.enumeration.Country;
+import org.exercises.oop.itogproject.ru.store.online.model.enumeration.Manufacturer;
+import org.exercises.oop.itogproject.ru.store.online.model.enumeration.PackageType;
+import org.exercises.oop.itogproject.ru.store.online.model.enumeration.Roasting;
 
-public class Coffee extends Drink {
-    private CoffeeType coffeeType;
-    private Roasting roasting;
+public final class Coffee extends Drink {
 
-    public Coffee(String name, BigDecimal price, Float weight, Manufacturer manufacturer, Country country,
-                  PackageType packageType, CoffeeType coffeeType, Roasting roasting) {
-        super(name, price, weight, manufacturer, country, packageType);
-        this.coffeeType = coffeeType;
-        this.roasting = roasting;
-    }
+  private final CoffeeType coffeeType;
+  private final Roasting roasting;
 
-    public CoffeeType getCoffeeType() {
-        return coffeeType;
-    }
+  public Coffee(String name, BigDecimal price, Float weight, Manufacturer manufacturer,
+      Country country,
+      PackageType packageType, CoffeeType coffeeType, Roasting roasting) {
+    super(name, price, weight, manufacturer, country, packageType);
+    this.coffeeType = coffeeType;
+    this.roasting = roasting;
+  }
 
-    public void setCoffeeType(CoffeeType coffeeType) {
-        this.coffeeType = coffeeType;
-    }
+  public CoffeeType getCoffeeType() {
+    return coffeeType;
+  }
 
-    public Roasting getRoasting() {
-        return roasting;
-    }
+  public Roasting getRoasting() {
+    return roasting;
+  }
 
-    public void setRoasting(Roasting roasting) {
-        this.roasting = roasting;
-    }
+  @Override
+  public String toString() {
+    return super.toString() + ", coffeeType=" + coffeeType.getText() + ", roasting="
+        + roasting.getText();
+  }
 }

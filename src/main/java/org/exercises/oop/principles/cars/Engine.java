@@ -1,32 +1,33 @@
 package org.exercises.oop.principles.cars;
 
 public class Engine {
-    private int power;
-    private String company;
 
-    public Engine(String company, int power) {
-        this.company = company;
-        this.power = power;
-    }
+  private int power;
+  private String company;
 
-    public String getCompany() {
-        return company;
-    }
+  public Engine(String company, int power) {
+    this.company = company;
+    this.power = power;
+  }
 
-    public void setCompany(String company) {
-        this.company = company;
-    }
+  public String getCompany() {
+    return company;
+  }
 
-    public int getPower() {
-        return power;
-    }
+  public void setCompany(String company) {
+    this.company = company;
+  }
 
-    public void setPower(int power) {
-        this.power = power;
-    }
+  public int getPower() {
+    return power;
+  }
 
-    @Override
-    public String toString() {
-        return "Производитель: " + company + "\nМощность двигателя: " + power + " л.с.";
-    }
+  public void setPower(int power) {
+    this.power = power;
+  }
+
+  @Override
+  public String toString() {
+    return "Производитель: " + company + "\nМощность двигателя: " + power + " л.с.";
+  }
 }

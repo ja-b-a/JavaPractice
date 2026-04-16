@@ -1,24 +1,26 @@
 package org.exercises.oop.principles.cars;
 
 public final class SportCar extends Car {
-    private double speed;
 
-    public SportCar(double speed, String marka, String carClass, String engineCompany, int enginePower,
-                    String driverName, int driverAge, int driverExperience) {
-        super(marka, carClass, engineCompany, enginePower, driverName, driverAge, driverExperience);
-        this.speed = speed;
-    }
+  private double speed;
 
-    public double getSpeed() {
-        return speed;
-    }
+  public SportCar(double speed, String marka, String carClass, String engineCompany,
+      int enginePower,
+      String driverName, int driverAge, int driverExperience) {
+    super(marka, carClass, engineCompany, enginePower, driverName, driverAge, driverExperience);
+    this.speed = speed;
+  }
 
-    public void setSpeed(double speed) {
-        this.speed = speed;
-    }
+  public double getSpeed() {
+    return speed;
+  }
 
-    @Override
-    public String toString() {
-        return super.toString() + "\nСкорость: " + speed + " км/ч";
-    }
+  public void setSpeed(double speed) {
+    this.speed = speed;
+  }
+
+  @Override
+  public String toString() {
+    return super.toString() + "\nСкорость: " + speed + " км/ч";
+  }
 }

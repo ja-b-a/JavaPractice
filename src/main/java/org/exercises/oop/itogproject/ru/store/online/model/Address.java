@@ -2,79 +2,86 @@ package org.exercises.oop.itogproject.ru.store.online.model;
 
 import org.exercises.oop.itogproject.ru.store.online.model.enumeration.Country;
 
-public class Address {
-    private Country country;
-    private String region;
-    private String city;
-    private String street;
-    private String house;
-    private String apartment;
-    private String index;
+public final class Address {
 
-    public Address(Country country, String region, String city, String street, String house,
-                   String apartment, String index) {
-        this.country = country;
-        this.region = region;
-        this.city = city;
-        this.street = street;
-        this.house = house;
-        this.apartment = apartment;
-        this.index = index;
-    }
+  private Country country;
+  private String region;
+  private String city;
+  private String street;
+  private String house;
+  private String apartment;
+  private String index;
 
-    public Country getCountry() {
-        return country;
-    }
+  public Address(Country country, String region, String city, String street, String house,
+      String apartment, String index) {
+    this.country = country;
+    this.region = region;
+    this.city = city;
+    this.street = street;
+    this.house = house;
+    this.apartment = apartment;
+    this.index = index;
+  }
 
-    public void setCountry(Country country) {
-        this.country = country;
-    }
+  public Country getCountry() {
+    return country;
+  }
 
-    public String getRegion() {
-        return region;
-    }
+  public void setCountry(Country country) {
+    this.country = country;
+  }
 
-    public void setRegion(String region) {
-        this.region = region;
-    }
+  public String getRegion() {
+    return region;
+  }
 
-    public String getCity() {
-        return city;
-    }
+  public void setRegion(String region) {
+    this.region = region;
+  }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+  public String getCity() {
+    return city;
+  }
 
-    public String getHouse() {
-        return house;
-    }
+  public void setCity(String city) {
+    this.city = city;
+  }
 
-    public void setHouse(String house) {
-        this.house = house;
-    }
+  public String getHouse() {
+    return house;
+  }
 
-    public String getStreet() {
-        return street;
-    }
+  public void setHouse(String house) {
+    this.house = house;
+  }
 
-    public void setStreet(String street) {
-        this.street = street;
-    }
+  public String getStreet() {
+    return street;
+  }
 
-    public String getIndex() {
-        return index;
-    }
+  public void setStreet(String street) {
+    this.street = street;
+  }
 
-    public void setIndex(String index) {
-        this.index = index;
-    }
+  public String getIndex() {
+    return index;
+  }
 
-    public String getApartment() {
-        return apartment;
-    }
+  public void setIndex(String index) {
+    this.index = index;
+  }
 
-    public void setApartment(String apartment) {
-        this.apartment = apartment;
-    }
+  public String getApartment() {
+    return apartment;
+  }
+
+  public void setApartment(String apartment) {
+    this.apartment = apartment;
+  }
+
+  @Override
+  public String toString() {
+    return "Address{country: %s, region: %s, city: %s, street: %s, house: %s, apartment: %s, index: %s}"
+        .formatted(country.getText(), region, city, street, house, apartment, index);
+  }
 }

@@ -1,5 +1,23 @@
 package org.exercises.oop.itogproject.ru.store.online.model.enumeration;
 
 public enum Aroma {
-    GRASSY, SWEET, RICH, DELICATE, LIGHT, FLORAL, HONEY_LIKE, FRUITY, WOODY
+  GRASSY("Травяной"),
+  SWEET("Сладкий"),
+  RICH("Насыщенный"),
+  DELICATE("Деликатный"),
+  LIGHT("Лёгкий"),
+  FLORAL("Цветочный"),
+  HONEY_LIKE("Медовый"),
+  FRUITY("Фруктовый"),
+  WOODY("Древесный");
+
+  private final String text;
+
+  Aroma(String text) {
+    this.text = text;
+  }
+
+  public String getText() {
+    return this.text;
+  }
 }
